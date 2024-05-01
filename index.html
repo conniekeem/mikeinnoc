@@ -15,6 +15,7 @@
     </script>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <script defer src="js/app.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
@@ -22,27 +23,25 @@
   
   <body>
     <header>
-      <!--Added the logo with a link to the gallery page-->
-      <a href="./index.html">
-        <!-- <img class="logo" src ="assets/logo/Cone.jpg" alt = "Image of logo 'cone'"> -->
-        <p class = "logo" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">cone</p>
-        <!-- <span class= "secLogo">코니</span> -->
-      </a>
       
-      <div class = "menu">
+      <div class="menu">
+        <a href="./index.html">
+          <!--Added the logo with a link to home page -->
+          <p class = "logo" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">cone</p>
+        </a>
         <nav>
-          <a href="./index.html">projects</a>
+          <a href="./project.html">projects</a>
           <a class = "mid" href="./play.html">play</a>
           <a class = "end" href="https://drive.google.com/file/d/1iij9-H61dsAr42DwitvBrEncxutqpH6_/view?usp=sharing">resume</a>
         </nav>
       </div>
     </header>
 
-    <section class="background"> 
-      <img src ="assets/background/duckies.jpg" class="parallax" alt = "Studio Ghibili Ducks in the bath">
+    <div class="background"> 
+      <img src ="/assets/background/duckies.jpg" class="parallax" alt = "Studio Ghibili Ducks in the bath">
       <div class="introduction">
         <!--heading for home-->
-        <h1>Hi, I'm <span class="autoType"></span></h1>
+        <h1>Hi, I'm <span class="typing"></span></h1>
 
         <h1 id ="about">
           I am a junior at Carnegie Mellon studying in Fine Arts with an 
@@ -51,44 +50,64 @@
           need it most.
         </h1>
       </div>
-    </section>
+    </div>
 
     <main>
       <!--class item to center the entire section-->
-      <div class="projects">
+      <div class="projectList">
         <div class="projectSections">
-          <div class = "projectTitle">
-            <h2 onclick="onClick(this)">art</h2>
+          <div class="projectTitle1">
+            <h2 onclick="showProjects1(this)">art</h2>
+          </div>
+          
+          <div class="projectNames1">
+            <a href="./project.html#artOne">
+              <h3>A Little Prank</h3>
+            </a>
+            <a href="./project.html#artTwo"> 
+              <h3>Waxnocchio</h3>
+            </a>
+            <a href="./project.html#artThree">
+              <h3>Mittens</h3>
+            </a>
           </div>
 
-          <div class = "show">
-            <h3>A Little Prank</h3>
-            <h3>Waxnocchio</h3>
-            <h3>Mittens</h3>
-          </div>
         </div>
 
+
         <div class="projectSections">
-          <div class = "projectTitle">
-            <h2>ux/ui</h2>
+          <div class="projectTitle2">
+            <h2 onclick="showProjects2(this)">ux/ui</h2>
           </div>
 
-          <div class = "show">
-            <h3>Amarrah</h3>
-            <h3>D. Line</h3>
-            <h3>AdVenture</h3>
+          <div class="projectNames2">
+            <a href="./project.html#uiOne">
+              <h3>Amarrah</h3>
+            </a>
+            <a href="./project.html#uiTwo">
+              <h3>D. Line</h3>
+            </a>
+            <a href="./project.html#uiThree">
+              <h3>AdVenture</h3>
+            </a>
           </div>
         </div>
         
         <div class="projectSections">
-          <div class = "projectTitle">
-            <h2>cs</h2>
+          <div class="projectTitle3">
+            <h2 onclick="showProjects3(this)">cs</h2>
           </div>
           
-          <div class = "show">
-            <h3>Mini Pokemon Showdown</h3>
-            <h3>Risograph</h3>
-            <h3>Kodama</h3>
+          <div class="projectNames3">
+            <a href="./html/project.html#csOne">
+              <h3>Mini Pokemon Showdown</h3>
+            </a>
+            <a href="./html/project.html#csTwo">
+              <h3>Risograph</h3>
+            </a>
+            <a href="./html/project.html#csThree">
+              <h3>Kodama</h3>
+            </a>
           </div>
         </div>
 
@@ -96,9 +115,5 @@
     </main>
 
     <br>
-
-    <div>
-      <h1>Let's talk!</h1>
-    </div>
   </body>
 </html>

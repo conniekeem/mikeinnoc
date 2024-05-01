@@ -2,16 +2,22 @@
 <html lang="en">
   <head> 
     <meta charset="UTF-8">
-    <title>Project Detail page</title>
+    <title>Home Page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,200&display=swap"
-      rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous">
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script defer src="js/projectDetailText.js"></script>
+    <script defer src="js/projects.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -20,35 +26,77 @@
     <header>
       <!--Added the logo with a link to the gallery page-->
       <a href="./index.html">
-        <p>connie kim</p> 
+        <!-- <img class="logo" src ="assets/logo/Cone.jpg" alt = "Image of logo 'cone'"> -->
+        <p class = "logo" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">cone</p>
       </a>
-      <!--Gave a navigation section for product and cart-->
-      <div class = "head">
+      
+      <div class="menu">
         <nav>
-          <!--Added class "on" to bold/highlight on the page it directs to-->
-          <a href="./index.html">projects</a>
-          <a href="./play.html">play</a>
-          <a href="https://drive.google.com/file/d/1iij9-H61dsAr42DwitvBrEncxutqpH6_/view?usp=sharing">resume</a>
-          <!-- <span class="badge"></span> -->
+          <a href="./project.html">projects</a>
+          <a class = "mid" href="./play.html">play</a>
+          <a class = "end" href="https://drive.google.com/file/d/1iij9-H61dsAr42DwitvBrEncxutqpH6_/view?usp=sharing">resume</a>
         </nav>
-        
-        <!--heading for product gallery section-->
-        <h1>Description of project</h1>
       </div>
     </header>
 
+
     <main>
-      <!--class "product detail" to flex the entire section-->
-      <div class="projectDetail">
-        <p class="projectThumbnail">photo</p> 
-        <div class = "projectDescription">
-          <!--content for text-->
-          <div>
-            <p>
-              Description
-            </p>
-          </div>  
-        </div>
+      <div class="projectContainer">
+        <!-- <template id ="projectPages"> -->
+          <section id="artOne">
+            <h3>A Little Prank</h3>
+
+            <!-- <div class="projectDetail">
+              <img class="projectMedia" src ="./assets/projects/Riso.png" alt = "weeeee">
+              
+              <div class="projectText">
+                <p class="projectYear"> 2023 </p>    
+                <p class="projectDescription"> Lorema ipmsue osmaurrag aboinrfvaidnrvghiaerfd jborefi vn</p>
+              </div> -->
+            </div>
+          </section>
+
+        <section id="artTwo">
+          <h3>Waxnocchio</h3>
+
+          <!-- <div class="projectDetail">
+            <img class="projectMedia" src ="./assets/projects/Riso.png" alt = "weeeee">
+            
+            <div class="projectText">
+              <p class="projectYear"> 2023 </p>    
+              <p class="projectDescription"> Lorema ipmsue osmaurrag aboinrfvaidnrvghiaerfd jborefi vn</p>
+            </div>
+          </div> -->
+        </section>
+
+        <section id="artThree">
+          <h3>Mittens</h3>
+        </section>
+
+        <section id="uiOne">
+          <h3>Amarrah</h3>
+        </section>
+
+        <section id="uiTwo">
+          <h3>D. Line</h3>
+        </section>
+
+        <section id="uiThree">
+          <h3>AdVenture</h3>
+        </section>
+
+        <section id="csOne">
+          <h3>Mini Pokemon Showdown</h3>
+        </section>
+
+        <section id="csTwo">
+          <h3>Risograph</h3>
+        </section>
+
+        <section id="csThree">
+          <h3>Kodama</h3>
+        </section>
+        
       </div>
     </main>
   </body>
