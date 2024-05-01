@@ -286,6 +286,24 @@ section h3 {
     margin-top: auto;
     margin-bottom: auto;
 }
+/* 
+section h2 {
+    font-size: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+} */
+
+#artOne, #artTwo, #artThree {
+    background-color: rgb(245, 199, 206);
+}
+
+#uiOne, #uiTwo, #uiThree {
+    background-color: rgb(165, 165, 240);
+}
+
+#csOne, #csTwo, #csThree {
+    background-color: rgb(230, 240, 165);
+}
 
 .projectTitle {
     justify-content: center;
@@ -326,7 +344,6 @@ section h3 {
     flex-direction: column;
     justify-content: space-around;
     margin: 10px;
-    /* background-color: pink; */
 }
 
 .projectYear {
