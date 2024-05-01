@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous">
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script defer src="js/app.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    <header>
+      <!--Added the logo with a link to the gallery page-->
+      <a href="./index.html">
+        <!-- <img class="logo" src ="assets/logo/Cone.jpg" alt = "Image of logo 'cone'"> -->
+        <p class = "logo" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">cone</p>
+        <!-- <span class= "secLogo">코니</span> -->
+      </a>
+      
+      <div class = "menu">
+        <nav>
+          <a href="./index.html">projects</a>
+          <a class = "mid" href="./play.html">play</a>
+          <a class = "end" href="https://drive.google.com/file/d/1iij9-H61dsAr42DwitvBrEncxutqpH6_/view?usp=sharing">resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="background"> 
+      <img src ="assets/background/duckies.jpg" class="parallax" alt = "Studio Ghibili Ducks in the bath">
+      <div class="introduction">
+        <!--heading for home-->
+        <h1>Hi, I'm <span class="autoType"></span></h1>
+
+        <h1 id ="about">
+          I am a junior at Carnegie Mellon studying in Fine Arts with an 
+          Additional Major in Human Computer Interaction and a minor in 
+          Animation. I strive to use my ideas and skills to help others who 
+          need it most.
+        </h1>
+      </div>
+    </section>
+
+    <main>
+      <!--class item to center the entire section-->
+      <div class="projects">
+        <div class="projectSections">
+          <div class = "projectTitle">
+            <h2 onclick="onClick(this)">art</h2>
+          </div>
+
+          <div class = "show">
+            <h3>A Little Prank</h3>
+            <h3>Waxnocchio</h3>
+            <h3>Mittens</h3>
+          </div>
+        </div>
+
+        <div class="projectSections">
+          <div class = "projectTitle">
+            <h2>ux/ui</h2>
+          </div>
+
+          <div class = "show">
+            <h3>Amarrah</h3>
+            <h3>D. Line</h3>
+            <h3>AdVenture</h3>
+          </div>
+        </div>
+        
+        <div class="projectSections">
+          <div class = "projectTitle">
+            <h2>cs</h2>
+          </div>
+          
+          <div class = "show">
+            <h3>Mini Pokemon Showdown</h3>
+            <h3>Risograph</h3>
+            <h3>Kodama</h3>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <br>
+
+    <div>
+      <h1>Let's talk!</h1>
+    </div>
+  </body>
+</html>
