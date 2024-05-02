@@ -29,31 +29,31 @@ function showProjects3(element) {
 /* ------------------------------------------------------------------------- */
 
 // scrolling
-// $(window).on("scroll", function () {
-//     var parallax = $(".parallax");
-//     var scrollPosition = $(this).scrollTop();
-//     parallax.css("transform", "translateY("+scrollPosition*.05 +"px"+")");
-//     // console.log(scrollPosition);
-// });
+$(window).on("scroll", function () {
+    var parallax = $(".parallax");
+    var scrollPosition = $(this).scrollTop();
+    parallax.css("transform", "translateY("+scrollPosition*.05 +"px"+")");
+    // console.log(scrollPosition);
+});
 
 // keep track of previous scroll position
-// let prevScrollPos = window.scrollY;
+let prevScrollPos = window.scrollY;
 
-// window.addEventListener('scroll', function() {
-//   // current scroll position
-//   const currentScrollPos = window.scrollY;
+window.addEventListener('scroll', function() {
+  // current scroll position
+  const currentScrollPos = window.scrollY;
 
-//   if (prevScrollPos > currentScrollPos) {
-//     // user has scrolled up
-//     document.querySelector('.menu').classList.add('show');
-//   } else {
-//     // user has scrolled down
-//     document.querySelector('.menu').classList.remove('show');
-//   }
+  if (prevScrollPos > currentScrollPos) {
+    // user has scrolled up
+    document.querySelector('.menu').classList.add('show');
+  } else {
+    // user has scrolled down
+    document.querySelector('.menu').classList.remove('show');
+  }
 
-//   // update previous scroll position
-//   prevScrollPos = currentScrollPos;
-// });
+  // update previous scroll position
+  prevScrollPos = currentScrollPos;
+});
 
 
 //auto typing feature

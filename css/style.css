@@ -8,24 +8,17 @@ html{
 
 /* When the browser is at least 600px and above */
 @media (max-width: 600px) {
-    html {
+    /* html {
         font-size: 20px;
-    }
+    } */
 
     .background {
         width: 100%;
         height: 50px;
     }
 
-    .projectSections{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-
-        margin: 0;
-        align-items: center;
-        justify-content: space-between;
+    nav { 
+        font-size: 5px;
     }
 }
 
@@ -51,13 +44,6 @@ a {
     text-decoration: none;
 }
 
-hr {
-    /* thicker lines */
-    height: 5px;
-    width: 100%;
-    background-color: black;
-}
-
 h1 {
     /* different font size and weight for headings for each page */ 
     width: 70%;
@@ -73,6 +59,7 @@ h1 {
 }
 
 h1#about {
+    /* different font size and weight for the about  */ 
     width: 70%;
     font-weight: 400;
     font-size: 28px;   
@@ -83,12 +70,13 @@ h1#about {
 }
 
 h3 {
-    /* width:90%; */
+    /* different font and size fr the titles on project page */
     font-weight: 100;
     font-size: 40px;  
 }
 
 h1#pageAbout {
+    /* different font size and weight for the about  */ 
     width: 100%;
     font-weight: 100;
     font-size: 60px;   
@@ -111,8 +99,6 @@ header {
     justify-content: center;
     align-content: center;
     z-index: 100;
-    /* background-color:pink;
-    border-radius: 150px; */
 }
 
 .logo {
@@ -135,6 +121,7 @@ header {
     backdrop-filter: blur(6px) saturate(100%);
 }
 
+/* toggle visibility */
 .show {
     display: flex;
 }
@@ -151,7 +138,7 @@ nav {
 }
 
 nav a {
-    /* adding margin to give space between the nav links*/
+    /* adding special shape to nav */
     width: 8%;
     margin-right: 10px;
     text-align: center;
@@ -160,7 +147,7 @@ nav a {
 }
 
 nav a.mid {
-    /* adding margin to give space between the nav links*/
+    /* adding special shape to nav */
     width: 8%;
     margin-right: 10px;
     text-align: center;
@@ -169,7 +156,7 @@ nav a.mid {
 }
 
 nav a.end {
-    /* adding margin to give space between the nav links*/
+    /* adding special shape to nav */
     width: 8%;
     margin-right: 10px;
     text-align: center;
@@ -177,16 +164,13 @@ nav a.end {
     border-radius: 0 150px 150px 0;
 }
 
+/* hover feature of the nav bar */
 nav a:hover {
     text-align: center;
     border: 4px solid #000000;
 }  
 
-.on {
-    /* when nav links are on the page it directs to, it stays bold and yellow */
-    font-weight: 800;
-}
-
+/* how the background div fits the surround elements */
 .background {
     width: 100%;
     height: 100vh;
@@ -196,6 +180,7 @@ nav a:hover {
     justify-content: center;
 }
 
+/* how the background image works on landing page */
 .background img{
     position: absolute;
     top: 0;
@@ -206,6 +191,7 @@ nav a:hover {
     z-index: -1;
 }
 
+/* style of font on the backgrounnd */
 .background h1{
     color: #000000;
     backdrop-filter: blur(6px) saturate(100%);
@@ -236,11 +222,13 @@ h2:hover {
     margin-bottom: 100px;
 }
 
+/* list of the project on home page */
 .projectList{
     width: 100%;
     padding: 80px 120px;
 }
 
+/* different sections for art uxui cs */
 .projectSections{
     width: 100%;
     display: flex;
@@ -249,15 +237,18 @@ h2:hover {
     justify-content: space-between;
 }
 
+/* make them seem clickable */
 .projectTitle1, .projectTitle2, .projectTitle3 {
     cursor: pointer;
 }
 
+/* hover feature of viewing the titles */
 .projectTitle1:hover + .projectNames1, .projectTitle2:hover + .projectNames2, 
 .projectTitle3:hover + .projectNames3{
     display: block;
 }
 
+/* toggle feature of viewing the titles */
 .projectNames1, .projectNames2, .projectNames3 {
     display: none;
 }
@@ -266,13 +257,14 @@ h2:hover {
 /* --------------------project section------------------------------- */
 
 .projectContainer {
-    /* cart section flex for the items and footer */
+    /* project section flex for projects*/
     width: 100%;
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
 
+/* each section being a snap */
 section {
     height: 100vh;
     display: flex;
@@ -281,36 +273,35 @@ section {
     scroll-snap-align: start;
 }
 
+/* different font for those pages */
 section h3 {
     font-size: 50px;
     margin-top: auto;
     margin-bottom: auto;
 }
-/* 
-section h2 {
-    font-size: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
-} */
 
+/* different color */
 #artOne, #artTwo, #artThree {
     background-color: rgb(245, 199, 206);
 }
 
+/* different color */
 #uiOne, #uiTwo, #uiThree {
     background-color: rgb(165, 165, 240);
 }
 
+/* different color */
 #csOne, #csTwo, #csThree {
     background-color: rgb(230, 240, 165);
 }
 
+/* 
 .projectTitle {
     justify-content: center;
 }
 
 .projectInfo {
-    /* item section flex for the image and text */
+    /* item section flex for the image and text 
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -319,9 +310,9 @@ section h2 {
 }
 
 .projectDetail {
-    /* cart descriptions are centered */
+    /* cart descriptions are centered
     width: 100%;
-    /* height: 100vh; */
+    /* height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -329,14 +320,12 @@ section h2 {
 }
 
 .projectMedia {
-    /* image size and border */
+    /* image size and border
     width: 100%; 
-    /* height: 100%;  */
+    /* height: 100%; 
     object-fit: contain;
     display: flex;
     justify-content: space-around;
-    /* margin-bottom: 30px;
-    margin-bottom: 30px; */
 }
 
 .projectText {
@@ -354,12 +343,11 @@ section h2 {
 }
 
 .projectDescription {
-    /* item text section flex for the right side */
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-content: center;
-}
+} */
 
 
 /* ---------------play section----------------------------------- */
@@ -430,6 +418,7 @@ section h2 {
 }
 
 .name{
+    /* title centering */
     text-align: center;
     margin: auto;
 }
