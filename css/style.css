@@ -17,8 +17,14 @@ html{
         height: 50px;
     }
 
-    nav { 
+    nav a { 
         font-size: 5px;
+        width: 50%;
+    }
+
+    nav a.end { 
+        font-size: 5px;
+        width: 50%;
     }
 }
 
