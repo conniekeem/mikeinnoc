@@ -1,0 +1,233 @@
+/* ---------------- homepage only (other pages still use style.css) ---------------- */
+
+:root {
+    --ink: #1c2a40;        /* deep navy from the painting */
+    --cream: #f6f1e3;      /* star glow */
+    --gold: #e9d48a;
+    --muted: #5d6b80;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* full-page snap scrolling, same feel as the projects page */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ------------------ header ------------------ */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    color: var(--cream);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* once past the hero the header turns into a frosted bar */
+.topbar.scrolled {
+    background: rgba(246, 241, 227, 0.75);
+    backdrop-filter: blur(10px);
+    color: var(--ink);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 300;
+    min-width: 70px;
+}
+
+.resume {
+    font-size: 16px;
+    font-weight: 300;
+    padding: 6px 22px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.resume:hover {
+    background: var(--cream);
+    color: var(--ink);
+}
+
+.topbar.scrolled .resume:hover {
+    background: var(--ink);
+    color: var(--cream);
+}
+
+/* ------------------ hero ------------------ */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    color: var(--cream);
+}
+
+.hero .parallax {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.intro {
+    width: 100%;
+    padding: 0 4vw;
+}
+
+.greeting {
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    margin: 0 0 0 0.5vw;
+}
+
+/* typed name/roles sized to span the screen
+   ("Connie Kim!" is ~5.6em wide, so 15.5vw fills it edge to edge) */
+.headline {
+    font-size: 15.5vw;
+    font-weight: 200;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    min-height: 1.05em;   /* no layout jump while the text is erased */
+    margin: 0;
+    text-shadow: 0 2px 30px rgba(20, 30, 50, 0.35);
+}
+
+.typed-cursor {
+    font-size: 15.5vw;
+    font-weight: 100;
+}
+
+.about {
+    max-width: 640px;
+    font-size: clamp(15px, 1.3vw, 18px);
+    font-weight: 300;
+    line-height: 1.7;
+    margin: 3vh 0 0 0.5vw;
+    opacity: 0.9;
+}
+
+.scrollHint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    opacity: 0.75;
+    animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+    50% { transform: translate(-50%, 6px); }
+}
+
+/* ------------------ p5 project sections ------------------ */
+.project {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 5vw;
+    padding: 100px 6vw 60px;
+}
+
+/* alternate light / dark like the colored panels on the projects page */
+.project:nth-of-type(odd) {
+    background: var(--ink);
+    color: var(--cream);
+}
+
+.sketchFrame {
+    width: 100%;
+    height: 100%;
+    max-height: 70vh;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(127, 127, 127, 0.12);
+}
+
+.sketchFrame canvas {
+    display: block;
+}
+
+.projectNum {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.projectText h2 {
+    font-size: clamp(32px, 4.5vw, 64px);
+    font-weight: 200;
+    line-height: 1.1;
+    margin: 8px 0 12px;
+}
+
+.projectYear {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    margin: 0 0 20px;
+}
+
+.project:nth-of-type(even) .projectYear {
+    color: var(--muted);
+}
+
+.projectDescription {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 420px;
+    margin: 0;
+}
+
+/* ------------------ phones ------------------ */
+@media (max-width: 700px) {
+    .topbar {
+        padding: 16px;
+    }
+
+    .intro {
+        padding: 0 16px;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 24px;
+        padding: 80px 16px 40px;
+    }
+}

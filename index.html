@@ -1,121 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
+  <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connie Kim</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-    crossorigin="anonymous">
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 
-    <script defer src="js/app.js"></script>
+    <!-- each p5 sketch lives in its own file and registers itself in window.sketches -->
+    <script defer src="js/sketches/sketch1.js"></script>
+    <script defer src="js/sketches/sketch2.js"></script>
+    <script defer src="js/sketches/sketch3.js"></script>
+    <script defer src="js/home.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
   </head>
-  
+
   <body>
-    <header>
-      
-      <div class="menu">
-        <a href="./index.html">
-          <!--Added the logo with a link to home page -->
-          <p class = "logo" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">cone</p>
-        </a>
-        <nav>
-          <a href="./project.html">projects</a>
-          <a class = "mid" href="./play.html">play</a>
-          <a class = "end" href="https://drive.google.com/file/d/1iij9-H61dsAr42DwitvBrEncxutqpH6_/view?usp=sharing">resume</a>
-        </nav>
-      </div>
+    <header class="topbar">
+      <a href="./index.html" class="logo" onmouseover="this.innerText='코니'" onmouseout="this.innerText='cone'">cone</a>
+      <a class="resume" href="https://drive.google.com/file/d/1iij9-H61dsAr42DwitvBrEncxutqpH6_/view?usp=sharing" target="_blank" rel="noopener">resume</a>
     </header>
 
-    <div class="background"> 
-      <img src ="./assets/background/bg_hyeon.jpg" class="parallax" alt = "Studio Ghibili Ducks in the bath">
-      <div class="introduction">
-        <!--auto type intro-->
-        <h1>Hi, I'm <span class="typing"></span></h1>
+    <!-- landing section -->
+    <section class="hero">
+      <img src="./assets/background/bg_hyeon.jpg" class="parallax" alt="Painterly night sky used for the background">
 
-        <h1 id ="about">
-          I am a recent graduate at Carnegie Mellon with a bachelors in Fine Arts and an 
-          Additional Major in Human Computer Interaction and a minor in 
-          Animation. I strive to use my ideas and skills to help others who 
-          need it most.
-        </h1>
+      <div class="intro">
+        <p class="greeting">Hi, I'm</p>
+        <h1 class="headline"><span class="typing"></span></h1>
+
+        <p class="about">
+          I am a recent graduate at Carnegie Mellon with a bachelors in Fine Arts and an
+          Additional Major in Human Computer Interaction and a minor in Animation.
+          I strive to use my ideas and skills to help others who need it most.
+        </p>
       </div>
-    </div>
 
-    <main>
-      <!--class item to center the entire section-->
-      <div class="projectList">
-        <div class="projectSections">
-          <!-- title section -->
-          <div class="projectTitle1">
-            <h2 onclick="showProjects1(this)">art</h2>
-          </div>
-          <!-- project title section -->
-          <div class="projectNames1">
-            <a href="./project.html#artOne">
-              <h3>more than hbd</h3>
-            </a>
-            <a href="./project.html#artTwo"> 
-              <h3>A Little Prank</h3>
-            </a>
-            <a href="./project.html#artThree">
-              <h3>Waxnocchio</h3>
-            </a>
-          </div>
+      <a class="scrollHint" href="#project1">scroll &darr;</a>
+    </section>
 
-        </div>
-
-        <div class="projectSections">
-          <!-- title section -->
-          <div class="projectTitle2">
-            <h2 onclick="showProjects2(this)">ux/ui</h2>
-          </div>
-          <!-- project title section -->
-          <div class="projectNames2">
-            <a href="./project.html#uiOne">
-              <h3>ScottyU</h3>
-            </a>
-            <a href="./project.html#uiTwo">
-              <h3>Soci-Nest</h3>
-            </a>
-            <a href="./project.html#uiThree">
-              <h3>AdVenture</h3>
-            </a>
-          </div>
-        </div>
-        
-        <div class="projectSections">
-          <!-- title section -->
-          <div class="projectTitle3">
-            <h2 onclick="showProjects3(this)">cs</h2>
-          </div>
-          <!-- project title section -->
-          <div class="projectNames3">
-            <a href="./html/project.html#csOne">
-              <h3>Mini Pokemon Showdown</h3>
-            </a>
-            <a href="./html/project.html#csTwo">
-              <h3>Risograph</h3>
-            </a>
-            <a href="./html/project.html#csThree">
-              <h3>Kodama</h3>
-            </a>
-          </div>
-        </div>
-
+    <!-- p5.js projects: one full-screen snap section each.
+         data-sketch must match the name the sketch file registers. -->
+    <section class="project" id="project1">
+      <div class="sketchFrame" data-sketch="sketch1"></div>
+      <div class="projectText">
+        <p class="projectNum">01</p>
+        <h2>Project One</h2>
+        <p class="projectYear">2024</p>
+        <p class="projectDescription">Placeholder p5.js sketch. Description coming soon.</p>
       </div>
-    </main>
+    </section>
 
-    <br>
+    <section class="project" id="project2">
+      <div class="sketchFrame" data-sketch="sketch2"></div>
+      <div class="projectText">
+        <p class="projectNum">02</p>
+        <h2>Project Two</h2>
+        <p class="projectYear">2024</p>
+        <p class="projectDescription">Placeholder p5.js sketch. Description coming soon.</p>
+      </div>
+    </section>
+
+    <section class="project" id="project3">
+      <div class="sketchFrame" data-sketch="sketch3"></div>
+      <div class="projectText">
+        <p class="projectNum">03</p>
+        <h2>Project Three</h2>
+        <p class="projectYear">2024</p>
+        <p class="projectDescription">Placeholder p5.js sketch. Description coming soon.</p>
+      </div>
+    </section>
   </body>
 </html>
